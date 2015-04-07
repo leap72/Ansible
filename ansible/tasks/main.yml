@@ -1,0 +1,5 @@
+---
+- name: PACKAGES | ansible | Install ansible
+  sudo: true
+  apt: pkg=ansible state=present
+  tags: ansible
