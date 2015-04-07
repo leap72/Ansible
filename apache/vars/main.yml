@@ -1,0 +1,6 @@
+---
+# These values can be read in other roles too
+apache_daemon: apache2
+apache_user: www-data
+apache_server_root: /etc/apache2
+apache_conf_path: /etc/apache2/sites-enabled

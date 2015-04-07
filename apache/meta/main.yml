@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Web Essentials
+  description: Installs/Configures Apache HTTP Server
+  company: Web Essentials
+  license: MIT
+  min_ansible_version: 1.6
+  platforms:
+    - name: Ubuntu
+      versions:
+        - raring
+        - saucy
+        - trusty
+  categories:
+    - development
+    - system
+dependencies: []

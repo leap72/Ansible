@@ -1,0 +1,20 @@
+---
+- name: Install packages
+  apt: pkg={{ item }}
+       state=installed
+       update_cache=yes
+       cache_valid_time=3600
+  with_items: apache_packages
+
+- name: Add modules
+  apache2_module: name={{ item }} state=present
+  with_items: apache_modules
+
+- name: Disable modules
+  apache2_module: name={{ item }} state=absent
+  with_items:
+    - php5
+
+- name: Remove default host
+  file: path=/etc/apache2/sites-enabled/000-default.conf state=absent
+
