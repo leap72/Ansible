@@ -1,5 +1,4 @@
-# Ansible
-h2. WHAT IS ANSIBLE?
+## WHAT IS ANSIBLE?
 
 Ansible is a radically simple IT automation engine that automates cloud
 provisioning, configuration management, application deployment,
@@ -12,17 +11,15 @@ the target nodes. It communicates via SSH port 22.
 Base on my own expereince it is very easy to learn and write the first
 ansible playbook or role.
 
-h2. Ansible Key Components
+## Ansible Key Components
 1. Inventory
 2. Playbook
 3. Role
 4. Ad-Hocs
 5. Modules
 
-h3. INVENTORY
-
+## INVENTORY
 Here's what a plain text inventory file like:
-
 [webservers]
 www1.example.com
 www2.example.com
@@ -31,9 +28,8 @@ www2.example.com
 db0.example.com
 db1.example.com
 
-h3. PLAYBOOK
-
-## Sample Playbooks
+## PLAYBOOK
+Sample Playbooks
 ---
 - hosts: examplehost
   gather_facts: true
@@ -42,8 +38,7 @@ h3. PLAYBOOK
     - role: mysql
     - role: sudo
 
-h3. Ad-Hocs
-
-## Sample Ad-Hocs
+##  Ad-Hocs
+Sample Ad-Hocs
 ansible hostname -a "free -m"
 
